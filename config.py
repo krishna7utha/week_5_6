@@ -30,6 +30,7 @@ class L1ICache(Cache):
     response_latency = 2
     mshrs = 4
     tgts_per_mshr = 20
+    # prefetcher = StridePrefetcher()
 
 class L1DCache(Cache):
     size = cache_size
@@ -39,6 +40,7 @@ class L1DCache(Cache):
     response_latency = 2
     mshrs = 4
     tgts_per_mshr = 20
+    # prefetcher = StridePrefetcher()
 
 # Set up the CPU's L1 instruction and data caches
 system.cpu.icache = L1ICache()
